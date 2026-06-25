@@ -11,6 +11,16 @@ function App() {
     { id: 3, title: "work 3", url: "images/img-3.jpg", desc: "work 3 description" },
     { id: 4, title: "work 4", url: "images/img-4.jpg", desc: "work 4 description" },
   ];
+  const [selectedId, setSelectedId] = useState(1);
+  const currentIndex = works.findIndex(item => item.id === selectedId);
+  const work = works[currentIndex];
+  const handlePrev = () => {
+    if (currentIndex > 0) setSelectedId(works[currentIndex - 1].id);
+  };
+  const handleNext = () => {
+    if (currentIndex < works.length - 1) setSelectedId(works[currentIndex + 1].id);
+  };
+
   return <></>;
 }
 export default App;
