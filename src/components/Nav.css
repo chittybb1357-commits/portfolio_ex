@@ -1,0 +1,11 @@
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+ul.menu .nav-item button.btn.active {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
